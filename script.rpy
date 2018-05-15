@@ -3,6 +3,11 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
+#Large ASCII text settings:
+#Website: http://www.kammerl.de/ascii/AsciiSignature.php
+#Style: Basic
+
+
 #define e = Character("Eileen")
 define cs = Character("C.S.")
 define lr = Character("L.R.")
@@ -424,12 +429,22 @@ label vincehousemorningday1:
 # [Eclair]*Pinches herself*
 # [Eclair]OW! Nope, still real enough.
 
-#    ______       _       _______     ________  ________  _______      ______        _     ____  ____
-#  .' ___  |     / \     |_   __ \   |_   __  ||_   __  ||_   __ \    |_   _ `.     / \   |_  _||_  _|
-# / .'   \_|    / _ \      | |__) |    | |_ \_|  | |_ \_|  | |__) |     | | `. \   / _ \    \ \  / /
-# | |          / ___ \     |  __ /     |  _| _   |  _| _   |  __ /      | |  | |  / ___ \    \ \/ /
-# \ `.___.'\ _/ /   \ \_  _| |  \ \_  _| |__/ | _| |__/ | _| |  \ \_   _| |_.' /_/ /   \ \_  _|  |_
-#  `.____ .'|____| |____||____| |___||________||________||____| |___| |______.'|____| |____||______|
+
+#  .o88b.  .d8b.  d8888b. d88888b d88888b d8888b.   d8888b.  .d8b.  db    db
+# d8P  Y8 d8' `8b 88  `8D 88'     88'     88  `8D   88  `8D d8' `8b `8b  d8'
+# 8P      88ooo88 88oobY' 88ooooo 88ooooo 88oobY'   88   88 88ooo88  `8bd8'
+# 8b      88~~~88 88`8b   88~~~~~ 88~~~~~ 88`8b     88   88 88~~~88    88
+# Y8b  d8 88   88 88 `88. 88.     88.     88 `88.   88  .8D 88   88    88
+#  `Y88P' YP   YP 88   YD Y88888P Y88888P 88   YD   Y8888D' YP   YP    YP
+
+$ grannyComplete = false
+$ cavesComplete = false
+$ storeComplete = false
+$ nurseryComplete = false
+$ observatoryComplete = false
+$ harbourComplete = false
+$ farmComplete = false
+$ mayorComplete = false
 
 #Day 1, In School
 #Interior, Classroom
@@ -546,88 +561,96 @@ label vincehousemorningday1:
 
 #The Gang exits the school.
 
-#Day 1, The General store
-#Interior, General store
+# .d8888.  .d8b.  db    db d88888b d8888b. .d8888.   .d888b.    .d8888.  .d8b.  db    db d88888b d8888b. .d8888.
+# 88'  YP d8' `8b `8b  d8' 88'     88  `8D 88'  YP   8P   8D    88'  YP d8' `8b `8b  d8' 88'     88  `8D 88'  YP
+# `8bo.   88ooo88  `8bd8'  88ooooo 88oobY' `8bo.     `Vb d8'    `8bo.   88ooo88  `8bd8'  88ooooo 88oobY' `8bo.
+#   `Y8b. 88~~~88    88    88~~~~~ 88`8b     `Y8b.    d88C dD     `Y8b. 88~~~88    88    88~~~~~ 88`8b     `Y8b.
+# db   8D 88   88    88    88.     88 `88. db   8D   C8' d8D    db   8D 88   88    88    88.     88 `88. db   8D
+# `8888Y' YP   YP    YP    Y88888P 88   YD `8888Y'   `888P Yb   `8888Y' YP   YP    YP    Y88888P 88   YD `8888Y'
 
-# [Peter Sayers]Well, well, well.  What a pleasant surprise!
-# [Missy Sayers]What surprise is that? Oh! I wasn’t expecting any of you to come by till later in the afternoon. Did school let out early?
-# [Eclair]Sort of. Can we ask you guys a few questions?
-# [Peter Sayers]Wait, let me guess…Career Day?
-# [Mishelle and Vince]Yup.
-# [Peter Sayers]Thought so.  Knew it was getting to be that time of year again.
-# [Missy Sayers]What would you like to know, kids?
-# [Eclair]Um…well, what do you do and how do you do it?
-# [Peter Sayers]Well we run this store, obviously!
-# [Missy Sayers]Though that’s harder than it looks.
-# [Eclair]You guys have everything.  How do you manage to do all that?
-# [Missy Sayers]A better way to phrase the question, Eclair.  Well,  we have a lot of help from our IA.
-# [Peter Sayers]Our Integrated Atomizer!
-# [Vince]The thing that I use to adjust my heat?
-# [Peter Sayers]Most every building has an IA, and yes, it does link in with a home’s internal systems, but it does so much more.
-# [Missy Sayers]It’s a virtually bottomless supply cache.  Folks at the docks scan the things that get shipped in…
-# [Peter Sayers]Their IA then breaks it down to the atomic level and transports it to our IA…
-# [Missy Sayers]And then it winds up on our shelves, fully materialized.  No delivery truck needed!
-# [Eclair]Seriously?
-# [Peter Sayers]Quite serious.
-# [Eclair]Holy cow!  I just realized, I’ve never seen a delivery truck, except for movies and T.V.
-# [Missy Sayers]Ahhh youth.  They take everything for granted, don’t they dear?
-# [Peter Sayers]Not observant at all.  Probably wouldn’t notice something if it bit them right on the nose.
-# [Mishelle]Then why have a store at all?  Why not just atomize and transport everything directly to people’s homes?
-# [Missy Sayers]That has more to do with the community’s philosophy, than with our technological capabilities.
-# [Peter Sayers]That, and we have a contract with the dock workers so that they don’t beam our merchandise to other people’s places.
-# [Vince]What philosophy?  I haven’t heard of any philosophy.
-# [Peter Sayers]Well that would be best explained by Mayor Knox. Now get going, you three. We’re not going to sit around answering all of your questions. Go seek more knowledge elsewhere.
-# [Missy Sayers]Oh, Eclair, if you have a minute. *Whispers* Your mother called me earlier today. Thought I might have something to help you with your little bed wetting problem.
-# [Eclair]Et tu, Mrs. Sayer?
-# [Missy Sayers]Would you be a dear and take this package of incontinence briefs home with you to your mother?
-# [Eclair]What’s that, Mrs. Sayer? I…I didn’t get that. I think I hear my mother calling. Gotta go! She wants to ruin my life.  That must be it.
-# [L.R.]Oh come on! Why couldn’t I have pushed the button, then?!  That would have been perfect, right there with the diapers, and everything! Gray haired girl wouldn’t have known what hit her!
-# [C.S.]The timing wasn’t right. According to the manual, in order to manually initiate a sync up, she has to be in a state of great emotional distress when she goes to sleep.  It’s too early, yet. I don’t think this would have done the trick.
-# [L.R.]We have a manual?
+# Sayers & Sayers, General Store, Store
 
-######################################
-#CHOICE HERE TO RETURN FOR THE BRIEFS#
-######################################
+label sayersStore:
 
-# [Missy Sayers]I know this isn’t easy for you, but you’re being very mature about it. And don’t worry about a thing. What you buy in this store is your business and no one elses.
-# [Eclair] Promise?
-# [Missy Sayers]Cross my heart. *To Mr.Sayers* Hey honey! I win the bet! She took ‘em! Now we don’t have to refund Marna and give her an extra pack, free!
-# [Eclair]Kill me now.
+    if storeComplete == false:
 
+        #Day 1, The General store
+        #Interior, General store
 
+        # [Peter Sayers]Well, well, well.  What a pleasant surprise!
+        # [Missy Sayers]What surprise is that? Oh! I wasn’t expecting any of you to come by till later in the afternoon. Did school let out early?
+        # [Eclair]Sort of. Can we ask you guys a few questions?
+        # [Peter Sayers]Wait, let me guess…Career Day?
+        # [Mishelle and Vince]Yup.
+        # [Peter Sayers]Thought so.  Knew it was getting to be that time of year again.
+        # [Missy Sayers]What would you like to know, kids?
+        # [Eclair]Um…well, what do you do and how do you do it?
+        # [Peter Sayers]Well we run this store, obviously!
+        # [Missy Sayers]Though that’s harder than it looks.
+        # [Eclair]You guys have everything.  How do you manage to do all that?
+        # [Missy Sayers]A better way to phrase the question, Eclair.  Well,  we have a lot of help from our IA.
+        # [Peter Sayers]Our Integrated Atomizer!
+        # [Vince]The thing that I use to adjust my heat?
+        # [Peter Sayers]Most every building has an IA, and yes, it does link in with a home’s internal systems, but it does so much more.
+        # [Missy Sayers]It’s a virtually bottomless supply cache.  Folks at the docks scan the things that get shipped in…
+        # [Peter Sayers]Their IA then breaks it down to the atomic level and transports it to our IA…
+        # [Missy Sayers]And then it winds up on our shelves, fully materialized.  No delivery truck needed!
+        # [Eclair]Seriously?
+        # [Peter Sayers]Quite serious.
+        # [Eclair]Holy cow!  I just realized, I’ve never seen a delivery truck, except for movies and T.V.
+        # [Missy Sayers]Ahhh youth.  They take everything for granted, don’t they dear?
+        # [Peter Sayers]Not observant at all.  Probably wouldn’t notice something if it bit them right on the nose.
+        # [Mishelle]Then why have a store at all?  Why not just atomize and transport everything directly to people’s homes?
+        # [Missy Sayers]That has more to do with the community’s philosophy, than with our technological capabilities.
+        # [Peter Sayers]That, and we have a contract with the dock workers so that they don’t beam our merchandise to other people’s places.
+        # [Vince]What philosophy?  I haven’t heard of any philosophy.
+        # [Peter Sayers]Well that would be best explained by Mayor Knox. Now get going, you three. We’re not going to sit around answering all of your questions. Go seek more knowledge elsewhere.
+        # [Missy Sayers]Oh, Eclair, if you have a minute. *Whispers* Your mother called me earlier today. Thought I might have something to help you with your little bed wetting problem.
+        # [Eclair]Et tu, Mrs. Sayer?
+        # [Missy Sayers]Would you be a dear and take this package of incontinence briefs home with you to your mother?
+        # [Eclair]What’s that, Mrs. Sayer? I…I didn’t get that. I think I hear my mother calling. Gotta go! She wants to ruin my life.  That must be it.
+        # [L.R.]Oh come on! Why couldn’t I have pushed the button, then?!  That would have been perfect, right there with the diapers, and everything! Gray haired girl wouldn’t have known what hit her!
+        # [C.S.]The timing wasn’t right. According to the manual, in order to manually initiate a sync up, she has to be in a state of great emotional distress when she goes to sleep.  It’s too early, yet. I don’t think this would have done the trick.
+        # [L.R.]We have a manual?
 
-# [Missy Sayers]Oh Eclair, have you decided to bring this
-# package home?
+        $ storeComplete = true
 
-menu:
-    "What to say?"
+    else:
 
-    "Yes":
-        $ pickedUpBriefs = true
+        # [Missy Sayers]Oh Eclair, have you decided to bring this package home?
 
-        # [Missy Sayers]I’ll just slip it into your backpack, and no one will be any wiser about it.
-        # [Missy Sayers]I know this isn’t easy for you, but you’re being very mature about it. And don’t worry about a thing. What you buy in this store is your business and no one elses.
-        # [Eclair] Promise?
-        # [Missy Sayers]Cross my heart. *To Mr.Sayers* Hey honey! I win the bet! She took ‘em! Now we don’t have to refund Marna and give her an extra pack, free!
-        # [Eclair]Kill me now.
+        menu:
+            "What to say?"
 
-    "No":
+            "Yes":
+                $ pickedUpBriefs = true
 
-        # [Missy Sayers]Well, I suppose I can’t force you to...
+                # [Missy Sayers]I’ll just slip it into your backpack, and no one will be any wiser about it.
+                # [Missy Sayers]I know this isn’t easy for you, but you’re being very mature about it. And don’t worry about a thing. What you buy in this store is your business and no one elses.
+                # [Eclair] Promise?
+                # [Missy Sayers]Cross my heart. *To Mr.Sayers* Hey honey! I win the bet! She took ‘em! Now we don’t have to refund Marna and give her an extra pack, free!
+                # [Eclair]Kill me now.
 
+            "No":
 
-#Talking to Peter Sayers after getting the briefs
-
-# [Peter Sayers]So embarrassed by the silliest things… When you grow up a little, this whole bed wetting thing will seem like nothing in comparison.
-
-
+                # [Missy Sayers]Well, I suppose I can’t force you to...
 
 
+    #Talking to Peter Sayers after getting the briefs
+
+    # [Peter Sayers]So embarrassed by the silliest things… When you grow up a little, this whole bed wetting thing will seem like nothing in comparison.
 
 
 
 
+# d8888b.  .d88b.  db      d888888b  .o88b. d88888b .88b  d88.  .d8b.  d8b   db   d8888b.  .d88b.  d8b   db  .d8b.  db      d8888b.
+# 88  `8D .8P  Y8. 88        `88'   d8P  Y8 88'     88'YbdP`88 d8' `8b 888o  88   88  `8D .8P  Y8. 888o  88 d8' `8b 88      88  `8D
+# 88oodD' 88    88 88         88    8P      88ooooo 88  88  88 88ooo88 88V8o 88   88oobY' 88    88 88V8o 88 88ooo88 88      88   88
+# 88~~~   88    88 88         88    8b      88~~~~~ 88  88  88 88~~~88 88 V8o88   88`8b   88    88 88 V8o88 88~~~88 88      88   88
+# 88      `8b  d8' 88booo.   .88.   Y8b  d8 88.     88  88  88 88   88 88  V888   88 `88. `8b  d8' 88  V888 88   88 88booo. 88  .8D
+# 88       `Y88P'  Y88888P Y888888P  `Y88P' Y88888P YP  YP  YP YP   YP VP   V8P   88   YD  `Y88P'  VP   V8P YP   YP Y88888P Y8888D'
 
+#Policeman Ronald
 
 # [Ronald]Hey, gang.  Skipping school, or Career Day?
 # [Eclair]Career Day.
@@ -649,17 +672,80 @@ menu:
 # [C.S.]Not yet. Give it time.
 # [L.R.]I’ll give you time. Harumph.
 
-#Day 1, Visiting Karlton before the Mayor
-#Interior, Laboratory
 
-# [Karlton]Let’s see…if you bounce the graviton particle beam off the main reflector dish... Then I might be able to stop the containment leak in the asymmetrical phaser sensors…but that would crumple the dorsal parabolic resonance engine.
-# [Eclair]Hello? Karlton?
-# [Karlton]BWAH! By everything that is Science, don’t sneak up on me! I’m working on something very delicate here.
-# [Eclair]Would you mind answering some questions for us for Career Day
-# [Karlton]Career Day? Don’t be silly. It’s not Career Day. Mayor Knox would have told me so. Now please, make yourselves scarce.
-# [Mishelle]Well, it’s not like we would get much out of Karlton that we could understand anyway.
-# [Vince]Yeah, Karlton is either a genius or a nut.
-# [Mishelle]Can’t he be both?
+#  .d88b.  d8888b. .d8888. d88888b d8888b. db    db  .d8b.  d888888b  .d88b.  d8888b. db    db
+# .8P  Y8. 88  `8D 88'  YP 88'     88  `8D 88    88 d8' `8b `~~88~~' .8P  Y8. 88  `8D `8b  d8'
+# 88    88 88oooY' `8bo.   88ooooo 88oobY' Y8    8P 88ooo88    88    88    88 88oobY'  `8bd8'
+# 88    88 88~~~b.   `Y8b. 88~~~~~ 88`8b   `8b  d8' 88~~~88    88    88    88 88`8b      88
+# `8b  d8' 88   8D db   8D 88.     88 `88.  `8bd8'  88   88    88    `8b  d8' 88 `88.    88
+#  `Y88P'  Y8888P' `8888Y' Y88888P 88   YD    YP    YP   YP    YP     `Y88P'  88   YD    YP
+
+label observatory:
+
+    #Day 1, Visiting Karlton before the Mayor
+    #Interior, Laboratory
+    if mayorComplete == false:
+
+        # [Karlton]Let’s see…if you bounce the graviton particle beam off the main reflector dish... Then I might be able to stop the containment leak in the asymmetrical phaser sensors…but that would crumple the dorsal parabolic resonance engine.
+        # [Eclair]Hello? Karlton?
+        # [Karlton]BWAH! By everything that is Science, don’t sneak up on me! I’m working on something very delicate here.
+        # [Eclair]Would you mind answering some questions for us for Career Day
+        # [Karlton]Career Day? Don’t be silly. It’s not Career Day. Mayor Knox would have told me so. Now please, make yourselves scarce.
+        # [Mishelle]Well, it’s not like we would get much out of Karlton that we could understand anyway.
+        # [Vince]Yeah, Karlton is either a genius or a nut.
+        # [Mishelle]Can’t he be both?
+
+    else:
+
+        # [Karlton]That should do it. Now if only I can get the quantum manifold to align properly with the focusing lenses. Oh wait!  I’ve got a paperclip! That should do the trick!
+        # [Karlton]Turns around, holding a pair of goggles in the air* BEHOLD! SCIENCE! BWAH! By flubber, what are you kids doing here?!
+        # [Eclair]Um…Career Day?
+        # [Karlton]Career Day? Now you’re just being silly. Career Day isn’t for a couple of weeks yet. Mayor Knox would tell me if it was Career Day.
+        # [Eclair]Um…Mayor Knox told us to tell you that it was Career Day.
+        # [Karlton]... ... ... OH MY SAGAN! IT’S CAREER DAY ALREADY! Umm… Oh yes, questions! Questions! You must have questions for me. What questions can I answer for you?
+        # [Mishelle]Well…what do you do exactly?
+        # [Karlton]What do I do? What do I do?! What do I do? Oh yes! Well, as Chief Scientist, my primary job is the maintenance, upkeep, and in some rare instances, the upgrading of technology here on the island.
+        # [Vince]Maintenance? Upkeep? So you’re basically just a high-tech janitor?
+        # [Eclair]Vince! Cut it out.
+        # [Karlton]Young man, I know more about this island than anyone alive. Only Doctor Harkness Milner himself could rival my knowledge.
+        # [Vince]My brother works in the library. All he does is read. I bet he could give you a run for your money.
+        # [Karlton]Derek is a fine young man, Vincent, but he’s no me. I invent things.
+        # [Mishelle]Like what?
+        # [Karlton]Like these babies! Oh! Oh….ooooooooooh. Still got some bugs to work out.
+        # [Vince]Inventor, eh?
+        # [Karlton]Even if my inventions still have some fine tuning yet to do, I am also the primary physician as well.
+        # [Eclair]But we’ve never even been sick.
+        # [Karlton]Well that’s probably because of all the immunity boosters and vaccines that are in the drinking water and food.
+        # [Eclair]Seriously?
+        # [Karlton]Completely and utterly.
+        # [Mishelle]And that’s not normal?
+        # [Karlton]For us it is.
+        # [Eclair]Does the rest of the world still poke people with diseased needles?
+        # [Karlton]Oh Logic, no. Most vaccinations are done with hypo-sprays and inhalants. Humanity has come a long way from scratching the skin with cowpox needles and the like. We’re just a little ahead of the curve and put it into our food.
+        # [Vince]Not to be rude, but that makes you a medical doctor how?
+        # [Karlton]Well I do have a near encyclopedic knowledge of everyone on the islands’ medical conditions. For example, all three of you have chronic nocturnal enuresis.
+        # [Vince]...
+        # [Mishelle]EEEEEP!
+        # [Eclair]Seriously?! What is with you guys today?
+        # [Karlton]Not to worry children, we still have doctor patient confidentiality. No one needs to know who doesn’t already.
+        # [Eclair]New topic- What about the power? Why isn’t there a power plant?
+        # [Karlton]*snorts* Oh that’s quite simple, really. The roof on every building is actually a very sophisticated solar panel.
+        # [Eclair]But they don’t look like the solar panels in our science books.
+        # [Karlton]I said they were sophisticated, didn’t I? Now children, I really have to get back to work on fixing my…uh… invention here. The mayor is waiting on this. Go bother some other adult.
+        # [L.R.]Now?
+        # [C.S.]I said not yet! Do you want all of that sensitive equipment to get peed on?
+        # [L.R.]…Kinda….
+
+        $ observatoryComplete = true
+
+#Developer note: Is Karlton lying about the solar panels, is the island running on another source of power? Or was the original Perp. Change devs too lazy to edit the tileset to have solar panels on the houses?
+
+# d8888b. d88888b  .d8b.   .o88b. db   db
+# 88  `8D 88'     d8' `8b d8P  Y8 88   88
+# 88oooY' 88ooooo 88ooo88 8P      88ooo88
+# 88~~~b. 88~~~~~ 88~~~88 8b      88~~~88
+# 88   8D 88.     88   88 Y8b  d8 88   88
+# Y8888P' Y88888P YP   YP  `Y88P' YP   YP
 
 #Day 1, Taking a break at the beach
 #Exterior, Beach
@@ -687,32 +773,77 @@ menu:
 
 # [Vince]Alright, that’s enough of that. Back to work.
 
-#Career Day, Ranger Michael etc.
+#  .o88b.  .d8b.  db    db d88888b .d8888.
+# d8P  Y8 d8' `8b 88    88 88'     88'  YP
+# 8P      88ooo88 Y8    8P 88ooooo `8bo.
+# 8b      88~~~88 `8b  d8' 88~~~~~   `Y8b.
+# Y8b  d8 88   88  `8bd8'  88.     db   8D
+#  `Y88P' YP   YP    YP    Y88888P `8888Y'
 
-#Trying to enter the caves before talking to granny
+#Caves
 
-# [Ranger Michael]Whoah! Hold on, scouts! You’re not planning on
-# going to the abandoned mine are you?
-# [Eclair]That depends. Would you say “okay” if we said “yes”?
-# [Ranger Michael]Sorry guys, that’s a no go. It’s too dangerous there.
-# That whole place is prone to cave-ins. That’s why
-# they closed it.
-# [Mishelle]That’s fine. We’re just trying to get to know about the
-# island a little bit for Career Day.
-# [Ranger Michael]Career Day? Why didn’t you say so?
-# [Vince]Does that mean we can check out the mines?
-# [Ranger Michael]Nope! But I can sure as heck educate you about my
-# job and the island!
-# Would you guys like to know about the life cycle and
-# migration habits of the ruby throated blue bellied
-# swallow?!
-# [Eclair]Um…doesn’t Granny Vincenza live somewhere
-# around here? I…I think I hear her calling.
-# [Ranger Michael]Granny Vincenza? Great idea! I bet she has all sorts of stories
-# about the mine. That’s a good safe way to learn
-# about it.
+label caves:
+
+    if grannyComplete == false:
+
+        # [Ranger Michael]Whoah! Hold on, scouts! You’re not planning on
+        # going to the abandoned mine are you?
+        # [Eclair]That depends. Would you say “okay” if we said “yes”?
+        # [Ranger Michael]Sorry guys, that’s a no go. It’s too dangerous there.
+        # That whole place is prone to cave-ins. That’s why
+        # they closed it.
+        # [Mishelle]That’s fine. We’re just trying to get to know about the
+        # island a little bit for Career Day.
+        # [Ranger Michael]Career Day? Why didn’t you say so?
+        # [Vince]Does that mean we can check out the mines?
+        # [Ranger Michael]Nope! But I can sure as heck educate you about my
+        # job and the island!
+        # Would you guys like to know about the life cycle and
+        # migration habits of the ruby throated blue bellied
+        # swallow?!
+        # [Eclair]Um…doesn’t Granny Vincenza live somewhere
+        # around here? I…I think I hear her calling.
+        # [Ranger Michael]Granny Vincenza? Great idea! I bet she has all sorts of stories
+        # about the mine. That’s a good safe way to learn
+        # about it.
+
+    else:
+
+        # [Ranger Michael]Hey there, scouts. Remember, no going in the mine.
+        # [Eclair]We weren’t even going to mention it, sir.
+        # [Ranger Michael]Good. Have you three seen Carmella around?
+        # [Vince]Maxwell Hanners’s sister?
+        # [Ranger Michael]She was here just a minute ago…
+        # [Granny Vicenza]Mikey!
+        # [Ranger Michael]It’s Michael, now, Granny; Ranger Michael.
+        # [Granny Vicenza]Oh how forgetful of me, you’re right. Ranger Michael, I believe I saw a gopher tortoise laying its eggs over yonder.
+        # [Granny Vicenza]Would you mind accompanying me to the site of the blessed event and tell me alllll about gopher tortoises?
+        # [Ranger Michael]Would I? Ahem, I mean, of course Granny Vincenza.  I’d be happy to educate you about the gopher tortoise.
+        # [Ranger Michael]You three stay out of trouble. And if you see Carmella, tell her she better not be setting up one of her pranks at the mines.
+        # [Eclair]Yes sir!
+        # [Mishelle]You got it!
+        # [Vince]*mutters* I can’t believe that worked.
+        # [Ranger Michael]What was that?
+        # [Vince]I said “Of course, sir!”
+        # [Mishelle]Hey is that Ranger Michael’s house?
+        # [Vince]They do not pay that guy nearly enough for living out here.
+        # [Mishelle]Just look at it.
+        # [Vince]More importantly, look at that crane.
+        # [Eclair]It’s ancient.
+        # [Mishelle]Older than the internet, even.
+        # [Vince]What’s even holding it together?
+        # [Mishelle]I have no idea.
+        # [Eclair]So, are we going inside the mine or what?
+        # [Mishelle]Sure, this could be pretty cool.
 
 #Interior, Caves
+
+# [Eclair]So, this is it.
+# [Vince]Yup. It’s abandoned alright.
+# [Mishelle]Ewww…this is more like a cave than a mine. Look there’s mushrooms growing everywhere.
+# [Eclair]Let’s check it out. Maybe we’ll find what Dr. Milner found all those years ago that caused him to shut the mine down.
+
+# [Vince]What in the world were they mining for? I don’t see even a trace of any precious mineral.
 
 # [Eclair]Hey guys! Over here! I think I found something!
 # [Eclair]Look at this back wall. It’s not made of rock like the rest of this place. It’s made of metal. And look, something is carved into it. It’s…it’s a mural.
@@ -952,179 +1083,193 @@ menu:
 # [Eclair]Crap. What do I do now?
 # [Eclair]What do I do? I’ve gotta get home, but I can’t show up like this. But the only thing I have that’s dry are these. Is it better to show up in wet pants, or a dry diaper?
 
-# []Change into the Incontinence Briefs?
-# <Choices:>  YES
-# <Choices:>  NO
+    if pickedUpBriefs == false:
 
-# [Eclair]No choice. Just gotta get home and hope Mom won’t
-# be mad.
-# [Eclair]This is going to suck.
+        # [Eclair]No choice. Just gotta get home and hope Mom won’t
+        # be mad.
 
-#Day 1, Eclair comes home, she chose to change into the briefs
+    else:
 
-# [Marna]Eclair?
-# [Eclair]Hi...
-# [Marna]…
-# [Eclair]...
-# [Marna]You’re not wearing any pants.
-# [Eclair]I know…
-# [Marna]Is this because of this morning? Is this some kind of a joke? Or rebellion?
-# [Eclair]Not exactly. I kinda had…an accident.
-# [Marna]Oh you poor thing!
-# [Marna]Here, sit down. I’ve got dinner ready. Tell me all about it.
-# [Marna]All three of you?
-# [Eclair]Yeah. Freaky, huh?
-# [Marna]I’ll say. What are the odds? Do you think you were poisoned?
-# [Eclair]Poisoned?
-# [Marna]Well, you have to admit, it’s an awfully big coincidence that all three of you had accidents at the same time in front of that…that…that BULLY. And you did mention that she was calling you babies before you ate lunch.
-# [Eclair]Huh. That is weird, isn’t it?
-# [Marna]I’d bring it up with Miss Georgette tomorrow, if I were you.
-# [Eclair]Maybe I will.
-# [Marna]Regardless, you were put in a bad situation, and you made the best of it. I’m very proud of you
-# [Eclair]You are?
-# [Marna]Of course, Eclair! That accident couldn’t be helped. That’s why it was an accident. But you just rolled with the punches and took care of the mess you were in. That’s a sign of real maturity.
-# [Eclair]Really?
-# [Marna]Sure. Maturity isn’t about acting “grown-up”. Maturity is changing what you can, accepting what you cannot and having the wisdom to know the difference.
-# [Eclair]Thanks, Mom.
-# [Marna]I just have one question.
-# [Eclair]What?
-# [Marna]Why didn’t you think to go buy new pants?
-# [Eclair]*Blushes* I honestly didn’t think to.
-# [Marna]...
-# [Eclair]...
-# [Marna]Heh-heh.
-# [Eclair]Hee-hee-hee.
-# [Marna]Hahahahahaa!
-# [Eclair]Heh-heh. Eh…heh.
-# [Marna]Oh my! Heh-heh. Oh dear. What am I ever going to do with you, Eclair?
-# [Eclair]I don’t know. Gosh, I was so embarrassed.
-# [Marna]Oh, you’re young yet. This too shall pass. If you want, tomorrow, you can blame me. Say that you did it as a way to try and embarrass me, or as a prank or something.
-# [Eclair]Seriously? You don’t mind being the bad guy?
-# [Marna]Not this time. You’re my daughter. Just because you’ve got a bed wetting problem and a weak bladder doesn’t mean I want you to be publicly humiliated.
-# [Eclair]I do not have a…! *Sigh* Thanks Mom. I’m going to go to bed. It’s been a long and crazy day.
-# [Marna]Oh, and Eclair?
-# [Eclair]Yeah?
-# [Marna]Since you’re already…wearing…maybe you could try going to bed with one on? Just this once? You might like waking up with dry sheets.
-# [Eclair]…! *Huff* Yes, Mother.
+        menu:
+            "Change into the Incontinence Briefs?"
 
-#Day 1, Eclair comes home, she chose to NOT change into the briefs
+            "Yes":
+                $ putOnBriefs = true
 
-# [Marna]Eclair?
-# [Eclair]Hi...
-# [Marna]…
-# [Marna]You’re soaking wet.
-# [Eclair]I know.
-# [Marna]And not from the rain.
-# [Eclair]Yeah. I know.
-# [Marna]You peed your pants.
-# [Eclair]Yeah.
-# [Marna]And you walked all the way home in them?
-# [Eclair]Yes, ma’am.
-# [Marna]What about the supplies I asked you to pick up? Why didn’t you change into those?
-# [Eclair]I was embarrassed.
-# [Marna]More embarrassed than walking home with pee-stained pants? If you had been in a clean incontinence brief, you could have at least played it off as a joke? There’s no faking that smell.
-# [Eclair]When you put it that way…
-# [Marna]*Sigh* Come on, honey. This is going to be embarrassing for both of us, but it’s time to get over your fear.
-# [Marna]Lie down, Eclair.
-# [Eclair]Do I have to? I’ve got clean panties here.
-# [Marna]This is to teach you a lesson. We’ll worry about what underwear you wear during the day, tomorrow. Now hold still, and legs up.
-# [Eclair]Wooooo! Cold! Cold! Cold!
-# [Marna]Sorry, hon. Should’ve worn you about the wipes. Now hold still, I’m almost done.
-# [Eclair]Yes ma’am.
-# [Marna]Well, it’s been a while, and it’s a few more tapes than I remember, but I’ve still got it. Now come on. Let’s eat dinner, and you can tell me all about what happened.
-# [Marna]So all three of you peed your pants at the same time?
-# [Eclair]Yes ma’am.
-# [Marna]Hmmm, that’s a little strange, even with all three of your weak bladders. Maybe it was sympathetic. One of you started and then the rest of you started.
-# [Eclair]But-
-# [Marna]Did any of you remember to take frequent bathroom breaks?
-# [Eclair]No, but-
-# [Marna]What about Michelle  and Vincent? Did they have any “just-in-case” clothes?
-# [Eclair]They just ran off.
-# [Marna]*Sighs* Ah you kids. What are you going to do without your parents?
-# [Eclair]Hey!
-# [Marna]I hope you at least go to different colleges on the
-# mainland. You’re all too old for more of your little
-# “soggy slumber parties”.
-# [Eclair]MOM!
-# [Marna]Sorry, dear. *chuckles* Sorry. What I don’t understand is why didn’t you at least put on a brief since you had access to them?  Why were you so embarrassed?
-# [Eclair]Fiona was there. I didn’t want to look like a baby any more than I already did.
-# [Marna]Oh honey, who cares about what Fiona thinks? Do you even like her? You have a genuine medical issue, and you needed a little extra protection. That’s it.
-# [Eclair]Mom, I wet my pants and you’re saying I should’ve just put on a diaper.
-# [Marna]You’re not wearing a diaper. It’s an incontinence brief.
-# [Eclair]You taped this thing on me, and then I heard you say “I’ve still got it.” How much experience do you have changing incontinence briefs?
-# [Marna]I guess I kind of got a little carried away there, didn’t I? It’s hard for parents to see that their children are going up in front of them.
-# [Eclair]But I don’t have…I mean I didn’t before-!
-# [Marna]Now, now. I’m not going to have the same discussion. You can say whatever you want, but that’s not going to change years and years of memoires, is it?
-# [Eclair](This is soooooo frustrating! Why am I the only one who remembers things differently?)
-# [Marna]All I’ll say is this. Maturity isn’t about what you wear or what you look like or what other people think of you. Maturity is being put into a bad situation and handling it with dignity and sense.
-# [Marna]It’s about changing what you can, accepting what you can’t, and being wise enough to know the difference.
-# [Eclair]I guess that makes sense. So it would’ve been more mature of me to put on a dry diaper?
-# [Marna]Almost anything would have been more mature than walking home in wet pants so that everyone could see you. I’ll admit though, that’s a bit of a tough call. At least you were mature enough to run that errand for me, even if it was a little embarrassing for you.
-# [Eclair]Thanks, I guess. So don’t freak out, and keep your cool. Is that why you made me wear one of these… things… to the dinner table?
-# [Marna]That…and I forgot how cute you looked with a padded tushie.
-# [Eclair]Mom!
-# [Marna]Sorry, I just got nostalgic. Seeing you like that reminds me of when you really were little.*Sigh* I should have had another. Oh well, just don’t make me a grandmother anytime soon.
-# [Eclair]No need to worry about that, Mom.
-# [Marna]Okay, off to bed. You’ve had a long day.  You need your rest.
-# [Eclair]Can I at least take this off? I think I’ve learned my lesson.
-# [Marna]I don’t know that you have. Off to bed. We’ll discuss what underwear you’re wearing tomorrow. Keep that on for the time being. No sense in wasting it.
-# [Eclair]Eww!
-# [Marna]Not what I mean. Just wear it tonight, just-in-case.
-# [Eclair]*Huff* Yes ma’am.
+            "No":
 
-#Day 1, Eclair comes home, she DID NOT pick up the briefs from the store
 
-# [Marna]Eclair?
-# [Eclair]Hi...
-# [Marna]…
-# [Marna]You’re soaking wet.
-# [Eclair]I know.
-# [Marna]And not from the rain.
-# [Eclair]Yeah. I know.
-# [Marna]You peed your pants.
-# [Eclair]Yeah.
-# [Marna]And you walked all the way home in them?
-# [Eclair]Yes, ma’am.
-# [Marna]What about the supplies I asked you to pick up? Why didn’t you change into those?
-# [Eclair]I didn’t want to pick them up.
-# [Marna]*Sigh* I know. Mrs. Sayers phoned me after you left the store. Which is why I went and got some myself. I am very disappointed in you, young lady. You’re going to learn to get over your pride the HARD WAY.
+    ecl "This is going to suck."
 
-#Change to spanking picture
+#Day 1, Eclair comes home
 
-# [Eclair]Mom! Don’t!
-# [Marna]I don’t want to hear it!
-# [Eclair]Oooch!
-# [Eclair]Ouch!
-# [Eclair]OOOCH!
-# [Eclair]OW!
-# [Marna]If you won’t take care of yourself like a grown woman, then I’ll just have to take care of you. LEGS UP!
-# [Eclair]*Sniff* I’m sorry!
-# [Marna]Now hold still!
-# [Eclair]EEEEP! Cold! Cold! Cold!
-# [Marna]Quit wriggling, or so help me…!
-# [Eclair]Okay, okay! Sorry! I couldn’t help it.
-# [Marna]Now hold still while I tape you up. *Huff* Never thought I’d have to do THAT again. Now come on. Your dinner’s getting cold.
-# [Eclair]Mom, wait! I can explain!
-# [Marna]Honestly, Eclair. I’m disappointed in you.
-# [Eclair]I don’t know what happened. One minute we were fine, and then we all peed ourselves.
-# [Marna]That’s not what I’m talking about. If Missy Sayers hadn’t called me to tell me about your “I hear my mother calling” stunt, you’d be out of a product you need.
-# [Eclair]But I don’t -!
-# [Marna]You walked home in wet pants!
-# [Eclair]I’m not a baby!
-# [Marna]Oh really? If a baby wet their pants, would they take care of it themselves, or would they crawl around in wet pants until a grown up helped them?
-# [Eclair]...
-# [Marna]Would an adult refuse to do a simple errand?
-# [Eclair]...
-# [Marna]You’re not immature because you have a weak bladder and had an accident. You’re immature because you shirked your responsibility and did nothing to help fix it, yourself.
-# [Marna]Bad things are going to happen to you as you grow up. How you deal with them is what makes you mature or not.
-# [Marna]You have to have change the things you can, accept the things you can’t, and have the wisdom to know the difference.
-# [Eclair]...Hmmph
-# [Marna]What’s going to happen to you when you wet the bed at college? Are you just goijng to let the sheets soak until someone else changes them for you?
-# [Eclair]I! DO! NOT! WET! THE! BED!
-# [Marna]Eclair...
-# [Eclair]Sorry.
-# [Marna]I think it’s time for you to go to bed.
-# [Eclair]Yes Mommy.
+    if pickedUpBriefs == false:
+
+        # [Marna]Eclair?
+        # [Eclair]Hi...
+        # [Marna]…
+        # [Marna]You’re soaking wet.
+        # [Eclair]I know.
+        # [Marna]And not from the rain.
+        # [Eclair]Yeah. I know.
+        # [Marna]You peed your pants.
+        # [Eclair]Yeah.
+        # [Marna]And you walked all the way home in them?
+        # [Eclair]Yes, ma’am.
+        # [Marna]What about the supplies I asked you to pick up? Why didn’t you change into those?
+        # [Eclair]I didn’t want to pick them up.
+        # [Marna]*Sigh* I know. Mrs. Sayers phoned me after you left the store. Which is why I went and got some myself. I am very disappointed in you, young lady. You’re going to learn to get over your pride the HARD WAY.
+
+        #Change to spanking picture
+
+        # [Eclair]Mom! Don’t!
+        # [Marna]I don’t want to hear it!
+        # [Eclair]Oooch!
+        # [Eclair]Ouch!
+        # [Eclair]OOOCH!
+        # [Eclair]OW!
+        # [Marna]If you won’t take care of yourself like a grown woman, then I’ll just have to take care of you. LEGS UP!
+        # [Eclair]*Sniff* I’m sorry!
+        # [Marna]Now hold still!
+        # [Eclair]EEEEP! Cold! Cold! Cold!
+        # [Marna]Quit wriggling, or so help me…!
+        # [Eclair]Okay, okay! Sorry! I couldn’t help it.
+        # [Marna]Now hold still while I tape you up. *Huff* Never thought I’d have to do THAT again. Now come on. Your dinner’s getting cold.
+        # [Eclair]Mom, wait! I can explain!
+        # [Marna]Honestly, Eclair. I’m disappointed in you.
+        # [Eclair]I don’t know what happened. One minute we were fine, and then we all peed ourselves.
+        # [Marna]That’s not what I’m talking about. If Missy Sayers hadn’t called me to tell me about your “I hear my mother calling” stunt, you’d be out of a product you need.
+        # [Eclair]But I don’t -!
+        # [Marna]You walked home in wet pants!
+        # [Eclair]I’m not a baby!
+        # [Marna]Oh really? If a baby wet their pants, would they take care of it themselves, or would they crawl around in wet pants until a grown up helped them?
+        # [Eclair]...
+        # [Marna]Would an adult refuse to do a simple errand?
+        # [Eclair]...
+        # [Marna]You’re not immature because you have a weak bladder and had an accident. You’re immature because you shirked your responsibility and did nothing to help fix it, yourself.
+        # [Marna]Bad things are going to happen to you as you grow up. How you deal with them is what makes you mature or not.
+        # [Marna]You have to have change the things you can, accept the things you can’t, and have the wisdom to know the difference.
+        # [Eclair]...Hmmph
+        # [Marna]What’s going to happen to you when you wet the bed at college? Are you just goijng to let the sheets soak until someone else changes them for you?
+        # [Eclair]I! DO! NOT! WET! THE! BED!
+        # [Marna]Eclair...
+        # [Eclair]Sorry.
+        # [Marna]I think it’s time for you to go to bed.
+        # [Eclair]Yes Mommy.
+
+    elif putOnBriefs == true:
+
+        # [Marna]Eclair?
+        # [Eclair]Hi...
+        # [Marna]…
+        # [Eclair]...
+        # [Marna]You’re not wearing any pants.
+        # [Eclair]I know…
+        # [Marna]Is this because of this morning? Is this some kind of a joke? Or rebellion?
+        # [Eclair]Not exactly. I kinda had…an accident.
+        # [Marna]Oh you poor thing!
+        # [Marna]Here, sit down. I’ve got dinner ready. Tell me all about it.
+        # [Marna]All three of you?
+        # [Eclair]Yeah. Freaky, huh?
+        # [Marna]I’ll say. What are the odds? Do you think you were poisoned?
+        # [Eclair]Poisoned?
+        # [Marna]Well, you have to admit, it’s an awfully big coincidence that all three of you had accidents at the same time in front of that…that…that BULLY. And you did mention that she was calling you babies before you ate lunch.
+        # [Eclair]Huh. That is weird, isn’t it?
+        # [Marna]I’d bring it up with Miss Georgette tomorrow, if I were you.
+        # [Eclair]Maybe I will.
+        # [Marna]Regardless, you were put in a bad situation, and you made the best of it. I’m very proud of you
+        # [Eclair]You are?
+        # [Marna]Of course, Eclair! That accident couldn’t be helped. That’s why it was an accident. But you just rolled with the punches and took care of the mess you were in. That’s a sign of real maturity.
+        # [Eclair]Really?
+        # [Marna]Sure. Maturity isn’t about acting “grown-up”. Maturity is changing what you can, accepting what you cannot and having the wisdom to know the difference.
+        # [Eclair]Thanks, Mom.
+        # [Marna]I just have one question.
+        # [Eclair]What?
+        # [Marna]Why didn’t you think to go buy new pants?
+        # [Eclair]*Blushes* I honestly didn’t think to.
+        # [Marna]...
+        # [Eclair]...
+        # [Marna]Heh-heh.
+        # [Eclair]Hee-hee-hee.
+        # [Marna]Hahahahahaa!
+        # [Eclair]Heh-heh. Eh…heh.
+        # [Marna]Oh my! Heh-heh. Oh dear. What am I ever going to do with you, Eclair?
+        # [Eclair]I don’t know. Gosh, I was so embarrassed.
+        # [Marna]Oh, you’re young yet. This too shall pass. If you want, tomorrow, you can blame me. Say that you did it as a way to try and embarrass me, or as a prank or something.
+        # [Eclair]Seriously? You don’t mind being the bad guy?
+        # [Marna]Not this time. You’re my daughter. Just because you’ve got a bed wetting problem and a weak bladder doesn’t mean I want you to be publicly humiliated.
+        # [Eclair]I do not have a…! *Sigh* Thanks Mom. I’m going to go to bed. It’s been a long and crazy day.
+        # [Marna]Oh, and Eclair?
+        # [Eclair]Yeah?
+        # [Marna]Since you’re already…wearing…maybe you could try going to bed with one on? Just this once? You might like waking up with dry sheets.
+        # [Eclair]…! *Huff* Yes, Mother.
+
+    else:
+
+        # [Marna]Eclair?
+        # [Eclair]Hi...
+        # [Marna]…
+        # [Marna]You’re soaking wet.
+        # [Eclair]I know.
+        # [Marna]And not from the rain.
+        # [Eclair]Yeah. I know.
+        # [Marna]You peed your pants.
+        # [Eclair]Yeah.
+        # [Marna]And you walked all the way home in them?
+        # [Eclair]Yes, ma’am.
+        # [Marna]What about the supplies I asked you to pick up? Why didn’t you change into those?
+        # [Eclair]I was embarrassed.
+        # [Marna]More embarrassed than walking home with pee-stained pants? If you had been in a clean incontinence brief, you could have at least played it off as a joke? There’s no faking that smell.
+        # [Eclair]When you put it that way…
+        # [Marna]*Sigh* Come on, honey. This is going to be embarrassing for both of us, but it’s time to get over your fear.
+        # [Marna]Lie down, Eclair.
+        # [Eclair]Do I have to? I’ve got clean panties here.
+        # [Marna]This is to teach you a lesson. We’ll worry about what underwear you wear during the day, tomorrow. Now hold still, and legs up.
+        # [Eclair]Wooooo! Cold! Cold! Cold!
+        # [Marna]Sorry, hon. Should’ve worn you about the wipes. Now hold still, I’m almost done.
+        # [Eclair]Yes ma’am.
+        # [Marna]Well, it’s been a while, and it’s a few more tapes than I remember, but I’ve still got it. Now come on. Let’s eat dinner, and you can tell me all about what happened.
+        # [Marna]So all three of you peed your pants at the same time?
+        # [Eclair]Yes ma’am.
+        # [Marna]Hmmm, that’s a little strange, even with all three of your weak bladders. Maybe it was sympathetic. One of you started and then the rest of you started.
+        # [Eclair]But-
+        # [Marna]Did any of you remember to take frequent bathroom breaks?
+        # [Eclair]No, but-
+        # [Marna]What about Michelle  and Vincent? Did they have any “just-in-case” clothes?
+        # [Eclair]They just ran off.
+        # [Marna]*Sighs* Ah you kids. What are you going to do without your parents?
+        # [Eclair]Hey!
+        # [Marna]I hope you at least go to different colleges on the mainland. You’re all too old for more of your little “soggy slumber parties”.
+        # [Eclair]MOM!
+        # [Marna]Sorry, dear. *chuckles* Sorry. What I don’t understand is why didn’t you at least put on a brief since you had access to them?  Why were you so embarrassed?
+        # [Eclair]Fiona was there. I didn’t want to look like a baby any more than I already did.
+        # [Marna]Oh honey, who cares about what Fiona thinks? Do you even like her? You have a genuine medical issue, and you needed a little extra protection. That’s it.
+        # [Eclair]Mom, I wet my pants and you’re saying I should’ve just put on a diaper.
+        # [Marna]You’re not wearing a diaper. It’s an incontinence brief.
+        # [Eclair]You taped this thing on me, and then I heard you say “I’ve still got it.” How much experience do you have changing incontinence briefs?
+        # [Marna]I guess I kind of got a little carried away there, didn’t I? It’s hard for parents to see that their children are going up in front of them.
+        # [Eclair]But I don’t have…I mean I didn’t before-!
+        # [Marna]Now, now. I’m not going to have the same discussion. You can say whatever you want, but that’s not going to change years and years of memoires, is it?
+        # [Eclair](This is soooooo frustrating! Why am I the only one who remembers things differently?)
+        # [Marna]All I’ll say is this. Maturity isn’t about what you wear or what you look like or what other people think of you. Maturity is being put into a bad situation and handling it with dignity and sense.
+        # [Marna]It’s about changing what you can, accepting what you can’t, and being wise enough to know the difference.
+        # [Eclair]I guess that makes sense. So it would’ve been more mature of me to put on a dry diaper?
+        # [Marna]Almost anything would have been more mature than walking home in wet pants so that everyone could see you. I’ll admit though, that’s a bit of a tough call. At least you were mature enough to run that errand for me, even if it was a little embarrassing for you.
+        # [Eclair]Thanks, I guess. So don’t freak out, and keep your cool. Is that why you made me wear one of these… things… to the dinner table?
+        # [Marna]That…and I forgot how cute you looked with a padded tushie.
+        # [Eclair]Mom!
+        # [Marna]Sorry, I just got nostalgic. Seeing you like that reminds me of when you really were little.*Sigh* I should have had another. Oh well, just don’t make me a grandmother anytime soon.
+        # [Eclair]No need to worry about that, Mom.
+        # [Marna]Okay, off to bed. You’ve had a long day.  You need your rest.
+        # [Eclair]Can I at least take this off? I think I’ve learned my lesson.
+        # [Marna]I don’t know that you have. Off to bed. We’ll discuss what underwear you’re wearing tomorrow. Keep that on for the time being. No sense in wasting it.
+        # [Eclair]Eww!
+        # [Marna]Not what I mean. Just wear it tonight, just-in-case.
+        # [Eclair]*Huff* Yes ma’am.
+
+
+
+
 
 #End of day 1
 #Interior, Eclairs Bedroom (Day 1 version)
@@ -1144,16 +1289,91 @@ menu:
 
         $ diaperToBed = true
 
+#Day 1 puzzle
 
+# [L.R.]Alright, just type in some 1’s and some 0’s, maybe a couple of 2’s just for funzies, and this manual sync up will be good and over.
+# [C.S.]Well…part over anyways
+# [L.R.]What do you mean “part over”?
+# [C.S.]This is a delicate process. It takes time.
+# [Eclair]Huh?
+# [C.S.]Oh no.
+# [Eclair]Who said that?
 
-#  ______        _     ____  ____    _____
-# |_   _ `.     / \   |_  _||_  _|  / ___ `.
-#   | | `. \   / _ \    \ \  / /   |_/___) |
-#   | |  | |  / ___ \    \ \/ /     .'____.'
-#  _| |_.' /_/ /   \ \_  _|  |_    / /_____
-# |______.'|____| |____||______|   |_______|
 
 $ puzzleWin = false
+
+# [Eclair]OH MY GOD! WHAT HAPPENED TO MY HOUSE?!
+# [L.R.]Hehe…told ya.
+# [C.S.]*sigh* Miss, please forgive my co-worker, here. He’s being rather insensitive at the moment.
+# [Eclair]WHAT HAPPENED TO MY HOUSE?!
+# [C.S.]The thing is…you see…you’re dreaming…this is all a dream.
+# [Eclair]…I’m dreaming?
+# [L.R.]Yup.
+# [Eclair]I’m dreaming about a big empty place right outside of my bedroom and two disembodied voices?
+# [L.R.]Oh…we’re not dreams. We’re technicians.
+# [C.S.]Technically.
+# [Eclair]What are you doing in my dreams, then?
+# [C.S.]We’re just syncing up your mind with our high tech computer.
+# [Eclair]Why?
+# [L.R.]So you’ll like wearing diapers!
+# [Eclair]WHAT?!
+# [C.S.]Why do you have to ruin everything?
+# [L.R.]What? She’s gonna end up wearing them anyways. Might as well tell her the upside.
+# [Eclair]What upside could there possibly be to that?
+# [L.R.]You’ll…like them…?
+# [C.S.]Look Miss, we’re just doing our jobs, here. I’m really sorry we’re disturbing your dreams, but we’ve got to get moving along.
+# [Eclair](There’s a computer! Maybe I can use it to stop whatever these two weirdos are trying to do.)
+# [L.R.]Ha! That’s a dream computer!  It’s not like interfacing with a dream computer is going to stop us! It just doesn’t work that way!
+# [C.S.]Actually, because her brainwaves are being synced up with our computer, that’s exactly how it works.
+# [L.R.]Crap! Well no worries. I programmed this subroutine myself. And it’s PRIMED against hacking. Heh-heh. Get it? PRIMED?!
+
+
+if puzzleWin = true:
+
+# [Mona]There you go! Diaper’s all changed. Now go and play, little one.
+# [Eclair]It’s the Nursery. But who’s that? And why does she seem so…familiar?
+# [Mona]Oooof…gotta go. Valerie! Where are you? I need some help, here!
+# [Valerie]Just a second, boss!
+# [Baby]Bwaaah!
+# [Mona]I’m…ugh…coming, kiddos. Just a second.
+# [Mona]Valerie I need you! Now!
+# [Valerie]Just a moment, Mona! I’m coming to relieve you!
+# [Mona]*Doing the potty dance*Speaking of relieve….
+# [Valerie]Huh?
+# [Mona]Just get in here!
+# [Mona]Valerie! Please! I can’t wait any…!
+# [Mona]Oh my God!
+# [Valerie]Here I…am? Oh dear!
+# [Mona]I…I…I…
+# [Valerie]Mona, are you okay?
+# [Mona]I just couldn’t…I just.  I didn’t mean…
+# [Valerie]It’s okay, boss. You don’t need to be embarrassed.
+# [Mona]I…I don’t?
+# [Valerie]I’ve known you for years. It’s no secret that you’ve got a weak bladder. That’s why you’ve got that change of spare clothes in your office.
+# [Mona]My spare clothes? Oh…yeah…that’s right. How did I forget about my “just-in-case” clothes?
+# [Valerie]You once joked that you had the bladder the size of a three year old and that’s why you were so good at potty training kids. Because you knew exactly how much their bladders could hold.
+# [Mona]Oh yes. Of course. I remember that story, now. It seems like forever since I told you that joke.
+# [Valerie]*Shrugs* Well, I remembered it. But don’t let me keep you here. I’ve got this under control. Go get changed.
+# [Mona]Good idea. I’ll be a few minutes.
+# [Valerie]Oh, and Mona.
+# [Mona]Yes?
+# [Valerie]Do you think maybe you should wear something with a little more…um…protection…just in case?
+# [Mona]Maybe you’re right. I’ll see if I can’t order something from the Sayers’ store.
+# [COMPUTER]End Memory Download.
+# [Eclair]Wait! What was that? Show me more!  Show me more!
+
+
+
+# d8888b.  .d8b.  db    db   .d888b.
+# 88  `8D d8' `8b `8b  d8'   VP  `8D
+# 88   88 88ooo88  `8bd8'       odD'
+# 88   88 88~~~88    88       .88'
+# 88  .8D 88   88    88      j88.
+# Y8888D' YP   YP    YP      888888D
+
+$ skippedSchool = false
+$ wetAccident = false
+$ messyAccident = false
 
 #Day 2, Eclair wakes up in her bed
 #Interior, Eclair's bedroom (Day 2 version).
@@ -1315,10 +1535,16 @@ else:
 
 #Doorbell sfx
 
-# [Marna]Oh, it looks like Vincent and Mishelle are here to walk with you to school. Time to get along and get going.  We’ll talk after school.
-# [Eclair]But I don’t wanna go to school! I want to stay here and talk to you! This is weird, Mom!  Really weird!
-# [Eclair]Mom, something very strange is going on here. Would you please stop and listen for just a second?!
-# [Marna]Here’s your backpack, filled with extra briefs just in case. Try to make it to the toilet if you can, obviously, but don’t feel embarrassed if you don’t make it. That’s why you have protection.
+    # [Marna]Oh, it looks like Vincent and Mishelle are here to walk with you to school. Time to get along and get going.  We’ll talk after school.
+
+        if immaturity >= 4:
+
+            # [Eclair]But I don’t wanna go to school! I want to stay here and talk to you! This is weird, Mom!  Really weird!
+
+        else:
+            # [Eclair]Mom, something very strange is going on here. Would you please stop and listen for just a second?!
+
+    # [Marna]Here’s your backpack, filled with extra briefs just in case. Try to make it to the toilet if you can, obviously, but don’t feel embarrassed if you don’t make it. That’s why you have protection.
 
 #Door sfx
 
@@ -1984,13 +2210,21 @@ menu:
     "Touch the carving?"
 
     "Yes":
-        ecl "That’s odd…I don’t feel any different."
-        ecl "Mmmmm….niiiiice."
-        "{i}As soon as Eclair lays her hand on the wall, a stream of urine escapes into her diaper. She doesn't even pay attention as a strange and pleasant feeling overwhelms her.{/i}"
+
+        if immaturity >= 10:
+
+            ecl "That’s odd…I don’t feel any different."
+
+        else:
+            ecl "Mmmmm….niiiiice."
+            "{i}As soon as Eclair lays her hand on the wall, a stream of urine escapes into her diaper. She doesn't even pay attention as a strange and pleasant feeling overwhelms her.{/i}"
+            $ immaturity +=1
+
 
     "No":
         ecl "I better not."
-        ecl "Well...Nothing here, I should investigate Ranger Michael's house."
+
+ecl "Well...Nothing here, I should investigate Ranger Michael's house."
 
 #Eclair continues with investigating Ranger Michael
 
@@ -2048,30 +2282,191 @@ menu:
 
 
 #End of Day 2
+
+#Eclair returns home
+
+    if skippedSchool == true:
+
+
+        # [Eclair]Hi Mom! I’m home in time for dinner!
+        # [Marna]...
+        # [Eclair]How have you been?
+        # [Marna]...
+        # [Eclair]Something the matter?
+        # [Marna]I just got off the phone with your teacher. Is there something you’d like to tell me?
+
+        if immaturity >= 4:
+
+            # [Eclair]Uh…no?
+            # [Marna]Well it’s too late. I already know that you skipped school.
+            # [Eclair]I couldn’t stay in school! There was so much important stuff to do today!
+        else:
+
+            # [Eclair]*Sigh* I was hoping you wouldn’t find out about that.
+            # [Marna]You’ve got some serious explaining to do, young lady! You skipped out of school!
+            # [Eclair]Wait! I can explain! It’s complicated! Weird things have been happening and I had to get out and figure out what was going on. Some things are more important than a single day at school!
+
+        # [Marna]And did you do any of these really “important” things during school hours?
+        # [Eclair]...Maybe
+        # [Marna]What do you mean, “maybe”?
+        # [Eclair]*Looks back at her backpack* I don’t know if that stuff is important yet because I haven’t gotten a chance to look at it, yet.
+        # [Marna]Well then what DID you do during school hours?
+        # [Eclair]*Gulps*I got a part time job and I bought some stuff.
+        # [Marna]*shakes her head* I am so ashamed of you right now.
+
+        if messyAccident == true:
+
+            # [Marna]*sniffs* What’s that smell? Is that…is that coming from you?!
+            # [Eclair]Wait, I can totally explain that!
+            # [Marna]*Taps foot* I’m listening….
+
+            if immaturity >= 4:
+
+                # [Eclair]I was hiding somewhere, and I didn’t want to get up to go poop.
+
+            else:
+
+                # [Eclair]Y’know what, it doesn’t sound any better in my head. Nevermind.
+
+        # [Marna]That’s it, I’ve just about run out of patience with you. You’re grounded.
+        # [Eclair]Grounded?! But Mom! I’m a nearly an adu-!
+
+        if immaturity >= 4:
+
+            # [Marna]Not right now, you aren’t! And before you can even think about skipping out of this house again, I’ll be taking your pants,little missy!
+
+        else:
+
+            # [Marna]Not right now, you aren’t! And before you can even think about skipping out of this house again, I’ll be taking your pants, young lady!
+
+        # [Eclair]What? No! Get away!(Mom’s gone bonkers!)
+        # [Marna]GOTCHA!
+
+        if messyAccident == true:
+
+            #Show messy time out picture
+
+        elif: wetAccident == true:
+
+            #Show wet time out picture
+
+        else:
+
+            #Show clean time out picture
+
+
+        # [Marna]If you’re going to act like some irresponsible little brat, I’m going to treat you like one. You’re in time out, and then you’re going to bed without your dinner.
+
+        if messyAccident == true:
+
+            # [Eclair](Ugh! No! This is so gross! I’m just… I’m just…sitting in my own…ewwww!  So mushy!)
+
+        # [Marna]And before you even think of it, I’ll have you know that I’ve already raided your closet and taken away anything that could preserve your modesty.
+        # [Marna]If you want to get out of this house, you’ll be prancing through town so that everyone can see you in your diaper.
+        # [Eclair]But they’re not diapers! Their inconti-
+        # [Marna]Oh, they’re diapers right now! If you act like a little kid, I’m going to call them what little kids call them!
+
+        if messyAccident == true or wetAccident == true:
+
+            # [Eclair]*sniff* Can you at least change me?
+            # [Marna]What?! Don’t be ridiculous! You change yourself before bed, little missy.
+
+    else:
+
+        # [Eclair]Hi mom! I’m home from school.
+        # [Marna]Welcome home, honey. Is everything alright?
+        # [Eclair]Yeah. Fine. Why?
+        # [Marna]Is there something you need to tell me?
+        # [Eclair]Could you be more specific?
+        # [Marna]Your teacher called me today. She told me there was an …incident at school and you were excused.
+
+        if immaturity >= 4:
+
+            # [Eclair]Oh…that...Please don’t be mad.
+            # [Marna]Why would I be mad?
+            # [Eclair]I peed my pants in front of everyone. Like a…like a baby.
+
+        else:
+
+            # [Eclair]Oh…that...I was hoping you wouldn’t find out about that.
+            # [Marna]Whatever for? You know you don’t have to keep secrets from me.
+            # [Eclair]Really? You told me not to be ashamed of…this. *gestures to her padded behind*.
+            # [Eclair]You lock me out of the house so that I’d have to go to school…and then I have a complete breakdown in front of my whole class. You don’t think I’d want to keep that to myself?
+
+        # [Marna]Honey, I’m not mad about that. You couldn’t help that. There was no way you could have predicted that at all. But I am proud that you apparently managed to keep busy the rest of the day. What did you do?
+
+        if immaturity >= 4:
+
+            # [Eclair]You know the usual…went to the library…went to the store.
+            # [Marna]And did you have fun?
+            # [Eclair]Kinda, yeah.
+            # [Marna]Well surely that didn’t take you all day. What else did you do?
+            # [Eclair]I went off on a little adventure of my own. Y’know. Spy stuff.
+
+        else:
+
+            # [Eclair]Well, I did a little odd jobs, and I happened to run across Marie and her mother.
+            # [Marna]Oh?How is Alma, anyway?
+            # [Eclair]She’s good. I might be babysitting Marie with Mishelle in a few days.
+            # [Marna]Well that’s good news. What else?
+            # [Eclair]I think I might have begun to figure out why I’ve been so… off lately. But I’d rather not get into it until I’m more certain.
+
+        # [Marna]Well, as long as you feel the time was well spent and didn’t cause too much mischief with your free time, I’m happy for you.
+        # [Eclair]Thanks, Mom. I am just so over today. It’s already older than the internet.
+        # [Marna]Well I’m proud of you, anyways. Give me a hug.
+
+        if messyAccident == true:
+
+            # [Marna]*sniffs* Eclair, honey? Is that smell…? What is that smell?
+            # [Eclair]Oh…yeah. I’d rather not get into that.  Is it okay if I skip dinner, take a shower and then go straight to bed?
+            # [Marna]Sure honey...sure.
+            # [Marna]What has gotten into her lately?
+
+        else:
+
+            # [Eclair]Mom, would it be okay if I skipped dinner and just went straight to bed?
+            # [Marna]Sure, dear. Go right on ahead.
+            # [Marna]That girl…
+
+
+
+
+
+
 #Interior, Eclair's Bedroom (Day 2 version)
 
 # []A quick shower and change later...
-# [Eclair]*Huff* WHAT?!
-# [Eclair]Come in.
 
-#If Ecalir skipped school?
+if skippedSchool == true:
 
-# [Eclair]Oh, hey Mishelle.
-# [Mishelle]Hey, we came to visit and see how you were doing? We
-# didn’t notice that you slipped out until it was too late.
-# [Vince]Your Mom said it was okay if we came in to try and talk
-# some sense into…
+    if immaturity >= 4:
 
-#Based on immaturity?
+        # [Eclair]*Huff* WHAT?!
 
-# [Eclair]Mommy?
+    else:
 
+        # [Eclair]Come in.
 
-# [Eclair]Who is it?
-# [Mishelle]It’s just me.
-# [Eclair]Mishelle? What are you doing here?
-# [Mishelle]We came to check up on you. After what happened at school, we figured you’d need some friends.
-# [Vince]Yeah, your mom is definitely worried about…
+    # [Eclair]Oh, hey Mishelle.
+    # [Mishelle]Hey, we came to visit and see how you were doing? We
+    # didn’t notice that you slipped out until it was too late.
+    # [Vince]Your Mom said it was okay if we came in to try and talk some sense into…
+
+else:
+
+    if immaturity >= 4:
+
+        # [Eclair]Mommy?
+
+    else:
+
+        # [Eclair]Who is it?
+
+    # [Mishelle]It’s just me.
+    # [Eclair]Mishelle? What are you doing here?
+    # [Mishelle]We came to check up on you. After what happened at school, we figured you’d need some friends.
+    # [Vince]Yeah, your mom is definitely worried about…
+
 # [Eclair]Eeeep!
 # [Vince]You!
 # [Vince]I’m sorry!  I’m sorry! I didn’t know you were just in your under… I mean your diap…I mean sorry! *To Mishelle* Why didn’t you tell me? I wouldn’t have come in.
@@ -2238,50 +2633,90 @@ menu:
 # [Mishelle]Is this because you’re avoiding going home and talking to your dad?
 # [Vince]Mishelle…
 
-#End of day 2 flashback
-#Nusery in the matrix
 
-# [Mona]Miss Gans?
-# [Mona]Miss Gans?
-# [Mona]I need a little…urgh…help here.
-# [Valerie]I’m coming, Mona! Be right there. Tommy is just being a bit of a handful right now.
-# [Mona]Well, I need…a break…if you know what I mean.
-# [Valerie]I’ll be right there to relieve you, hon!
-# [Mona]Please don’t say relieve!
-# [Valerie]Just a second.
-# [Mona]Ugggh. No. Come on. Come on. I can’t….I can’t…I can’t…
-# [Valerie]You can’t what?
-# [Mona]Hold it!....oh no!
-# [Valerie]Okay, I’m here. What’s up?
-# [Mona]I….I….I…
-# [Valerie]Mona? What’s wrong honey?
-# [Mona]I…I had…an accident.
-# [Valerie]So? That’s why you wear your incontinence briefs, Mona. Everybody knows about your urinary incontinence. I knew it when I agreed to take you in as my intern.
-# [Valerie]*sniff* But I think one of the little ones had a different kind of accident.
-# [Valerie]Now which one of you little stinkers was it?
-# [Mona]Miss Gans.
-# [Valerie]Was it you?
-# [Mona]Miss Gans...
-# [Valerie]Or you?
-# [Mona]Miss Gans...
-# [Valerie]What about…?
-# [Mona]It was me.
-# [Valerie]You? But Mona, you told me you were only urinary incontinent.
-# [Mona]I am, ma’am. I just…I just had an accident.
-# [Valerie]How did that happen?
-# [Mona]I just needed to go, but I couldn’t leave the little ones alone… And by the time you came, it was too late.
-# [Valerie]Oh, you poor thing. Tell you what. Go use one of the tubs and get yourself cleaned up. Then when you’re done, you can take the rest of the day off and go home.
-# [Mona]Are…are you sure?
-# [Valerie]Sure as sure can be. Now get to it. I don’t want my favorite intern to get a rash.
-# [Mona]…Yes ma’am…
-# [Valerie]Oh, and Mona?
-# [Mona]Yes, Miss Gans?
-# [Valerie]You don’t have any kids, do you?
-# [Mona]No! Of course not!  I’m barely out of high school. I don’t even have a boyfriend right now. Why do you ask?
-# [Valerie]Oh, no reason. Just checking.
-# [Mona]Checking what?
-# [Valerie]I meant, “Just wondering”. Idle curiosity is all.
-# [COMPUTER]End Memory Download.
+# [Eclair]I hate these dreams.
+# [L.R.]Well tell ya what, just give us a few more nights and you’ll stop having them. Nothing but rainbows, and puppies, and fairy tales. Deal? Just lay back and relax.
+# [Eclair]Man, you’re annoying.
+# [C.S.]I know, right?
+# [L.R.]Hey! Whose side are you on?
+# [C.S.]What? She’s got a point.
 
+# [Eclair]So what now?
+# [L.R.]Oh believe me, you are not getting past this security program I set up. You’re better off if you just throw the fight.
+# [C.S.]Actually, I’ve got this one. Computer: Initiate protocol- “Ghost House”.
+# [L.R.]What?! The Ghost House Trap?! But you never finished that one!
+# [C.S.]Even incomplete it’s more than she can handle. Now stand back, and watch how a master of regression does it.
+
+
+$ puzzle2Win = false
+
+if puzzle2Win = true:
+
+
+    # [COMPUTER]Error. Error. Maturity Regression Subroutines compromised. Core Memory Breach.
+    # [L.R.]Yeah, that showed me alright…
+    # [C.S.]Shut up.
+    # [COMPUTER]Memory Download Initiated. Accessing Most Recent Successful Harvest, Day 2.
+    # [Eclair]What’s this?
+
+
+
+
+    #End of day 2 flashback
+    #Nusery in the matrix
+
+    # [Mona]Miss Gans?
+    # [Mona]Miss Gans?
+    # [Mona]I need a little…urgh…help here.
+    # [Valerie]I’m coming, Mona! Be right there. Tommy is just being a bit of a handful right now.
+    # [Mona]Well, I need…a break…if you know what I mean.
+    # [Valerie]I’ll be right there to relieve you, hon!
+    # [Mona]Please don’t say relieve!
+    # [Valerie]Just a second.
+    # [Mona]Ugggh. No. Come on. Come on. I can’t….I can’t…I can’t…
+    # [Valerie]You can’t what?
+    # [Mona]Hold it!....oh no!
+    # [Valerie]Okay, I’m here. What’s up?
+    # [Mona]I….I….I…
+    # [Valerie]Mona? What’s wrong honey?
+    # [Mona]I…I had…an accident.
+    # [Valerie]So? That’s why you wear your incontinence briefs, Mona. Everybody knows about your urinary incontinence. I knew it when I agreed to take you in as my intern.
+    # [Valerie]*sniff* But I think one of the little ones had a different kind of accident.
+    # [Valerie]Now which one of you little stinkers was it?
+    # [Mona]Miss Gans.
+    # [Valerie]Was it you?
+    # [Mona]Miss Gans...
+    # [Valerie]Or you?
+    # [Mona]Miss Gans...
+    # [Valerie]What about…?
+    # [Mona]It was me.
+    # [Valerie]You? But Mona, you told me you were only urinary incontinent.
+    # [Mona]I am, ma’am. I just…I just had an accident.
+    # [Valerie]How did that happen?
+    # [Mona]I just needed to go, but I couldn’t leave the little ones alone… And by the time you came, it was too late.
+    # [Valerie]Oh, you poor thing. Tell you what. Go use one of the tubs and get yourself cleaned up. Then when you’re done, you can take the rest of the day off and go home.
+    # [Mona]Are…are you sure?
+    # [Valerie]Sure as sure can be. Now get to it. I don’t want my favorite intern to get a rash.
+    # [Mona]…Yes ma’am…
+    # [Valerie]Oh, and Mona?
+    # [Mona]Yes, Miss Gans?
+    # [Valerie]You don’t have any kids, do you?
+    # [Mona]No! Of course not!  I’m barely out of high school. I don’t even have a boyfriend right now. Why do you ask?
+    # [Valerie]Oh, no reason. Just checking.
+    # [Mona]Checking what?
+    # [Valerie]I meant, “Just wondering”. Idle curiosity is all.
+    # [COMPUTER]End Memory Download.
+
+else:
+
+    # [COMPUTER]Process Complete. Begin reality overwrite of previous day.
+
+    # [Eclair]I! Want! My! Mamma!
+    # [Teacher]*on the phone* Hello, Miss Marna? We’ve got a slight problem. Little Eclair just had another big accident, and we’re fresh out of diapers for her.
+    # [Teacher]Would you mind running some over to us? Even better, would you mind picking her up? She doesn’t have a fever, but her last few have been a little…runny.
+    # [Teacher]I think she might be coming down with something. I’ll write her a pass excusing her for the day. Okay, thank you very much.
+    # [Vince]Bye bye!
+    # [Mishelle]Bye Eclair! I hope you feel bettah!
+    # [Eclair]Wait! That never happened! That never happened at all!
 
     return
