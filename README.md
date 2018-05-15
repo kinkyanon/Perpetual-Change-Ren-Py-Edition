@@ -8,7 +8,7 @@ This project aims to port the game from RPG Maker XP to Ren'Py.
 - [ ] Non-linear exploration system, allow the user to choose where to go
 - [ ] Script all the character portraits [HARD]
 - [ ] Create all the necessary backgrounds 
-- [ ] ???
+- [ ] Add music, possibly replacing copyrighted tracks.
 
 Latest version of the original (Chapter 2) can be found here:
 https://pieceofsoap.deviantart.com/art/Perpetual-Change-Chapter-2-680374847
