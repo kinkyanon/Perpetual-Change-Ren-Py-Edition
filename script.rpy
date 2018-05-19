@@ -1328,7 +1328,7 @@ $ puzzleWin = false
 # [L.R.]Crap! Well no worries. I programmed this subroutine myself. And it’s PRIMED against hacking. Heh-heh. Get it? PRIMED?!
 
 
-if puzzleWin = true:
+if puzzleWin == true:
 
 # [Mona]There you go! Diaper’s all changed. Now go and play, little one.
 # [Eclair]It’s the Nursery. But who’s that? And why does she seem so…familiar?
@@ -2171,6 +2171,432 @@ else:
 
 # [Eclair]So…I don’t have any money. Is there any chance I could, I don’t know, have those baby diapers…as a favor?
 # [Missy Sayers]Sorry, Eclair. Not this time. Money or nothing.
+
+#  .o88b.  .d8b.  d88888b d88888b
+# d8P  Y8 d8' `8b 88'     88'
+# 8P      88ooo88 88ooo   88ooooo
+# 8b      88~~~88 88~~~   88~~~~~
+# Y8b  d8 88   88 88      88.
+#  `Y88P' YP   YP YP      Y88888P
+
+$ scoutJobComplete = false
+$ scoutJobReqFliers = 5
+
+$ cafeCleanUpJob = false
+$ cafeCleanUpJobComplete = false
+
+$ mollyProgress = 0
+
+$ almaAndMarieInitial = false
+$ promiseIceCream = false
+
+label molly:
+
+    if mollyProgress == 0:
+
+        # [Molly]Like, sup?
+        # [Eclair]This place looks like a tornado came through here. What happened?
+        # [Molly]Like, false advertising.
+        # [Eclair]False advertising? How?
+        # [Molly]Like, somebody posted a fake ad saying that I was giving away free coffee for life and everybody just rushed in here.
+        # [Molly]It was louder and more crowded than the last Electric Light Digital Grunge Underground concert that I went to. They’re like, so cool. But you probably never heard of them.
+        # [Eclair]This place looks trashed.
+        # [Molly]Like, yeah. It’s almost as bad as a Nu Skank Pit.
+        # [Eclair]A what?
+        # [Molly]Like, that’s when a bunch of people are skanking in a mosh pit while Pixel Trombone- that’s this new Nu Wave Ska cover band- are jamming out.
+        # [Eclair]I’m almost sure all of those were real words.
+        # [Molly]Like, kids. So uncool. Almost as bad as old people. So, like, do you want a job or something?
+        # [Eclair]Job? Now you’re speaking my language! What do you want me to do? Make espressos? Cook pastries? Wipe tables?
+        # [Molly]Like, pass out fliers.
+        # [Eclair]Pass out fliers?
+        # [Molly]Like, more like pass out fliers to the scouts that I’ve already paid to pass out fliers. Like, all those people left mad, and I need to advertise to get more customers. Like, people who actually will pay money for coffee.
+        # [Eclair]So what do you want me to do?
+        # [Molly]Like, I already paid some scouts to pass out fliers for me. But like, if you meet them in the field, they can keep working and passing out fliers instead of having to come back here to get more. Got it?
+
+        if immaturity >= 4:
+            #Image with arms at her side, looking perky
+            # [Eclair]Got it!
+        else:
+            #Image with arms crossed. Who even notices this?
+            # [Eclair]Got it!
+
+        # []ECLAIR RECEIVED 5 BUNDLES OF FLIERS!
+        # []NEW NOTE ADDED TO THE INVENTORY!
+
+        # [Molly]Like, give those to the scout troop members, and then
+        # come back here and I’ll pay you.
+        # [Eclair]Deal!
+
+        $ mollyProgress += 1
+
+    elif mollyProgress == 2:
+
+        # [Molly]Like, can I help you?
+
+        menu:
+            "What do you say?"
+
+            "No, I’m good":
+
+                # [Eclair]No I’m good.
+                # [Molly]Like, okay. Not to be uncool, but I kinda need my
+                # customers back, so would you mind getting going?
+
+            "Whine to get an easier job":
+
+                # [Eclair]Do I haaaave to go alllll over Farzon to distribute these fliers?
+                # [Molly]Like, if you want money, yah.
+                # [Eclair]But I don’t need THAT much money. And my legs are already soooooo tired.
+                # [Molly]*Huff* Like, fine. Just give me those fliers so I can re-sort them.
+                # []Eclair gives Molly the 5 bundles of fliers.
+                # [Molly]Like, here. So uncool, but whatever. I like, redistributed them into bigger stacks, so some of those scouts are going to have to work harder than others. But it’s, like, better than nothing.
+                # []ECLAIR RECEIVED 3 BUNDLES OF FLIERS!
+
+                $ immaturity += 1
+
+        $ mollyProgress += 1
+
+    elif mollyProgress == 3:
+
+        # [Molly]Like, could you start working so I can get my customers back. Sometime soon? Like, now-ish?
+
+    elif scoutJobComplete == true:
+
+        # [Eclair]All done.
+        # [Molly]LIKE, WHAT?!
+        # [Eclair]I delivered the fliers.
+        # [Molly]LIKE, WHAT?!
+        # [Eclair]I delivered the fliers!
+        # [Molly]LIKE, I CAN’T HEAR YOU!
+
+        if immaturity >= 4:
+            # [Eclair]I SAID: I! DELIEVERED! THE! FLOWERS!
+            # [Molly]LIKE, WHAT? I LIKE, CAN’T HEAR YOU!
+            # [Eclair]AHHHHHH! *Pulls her hair in frustration*
+        else:
+            # [Eclair]*Sees the earbuds in Molly’s ears* Are you listening to music?
+            # [Molly]LIKE, HOLD ON! I’M LIKE, LISTENING TO MUSIC! LIKE, I WANNA FINISH THIS TUNE. IT’S, LIKE, MY JAM!
+            # [Eclair]*Waits Patiently*...
+
+        # [Molly]*Removes the earbuds blaring music* Like, sorry about that. I was, like, jamming out to my favorite band.
+        # [Eclair]Pixel Trombones?
+        # [Molly]Ugh, like no. Like, Pixel Trombones are sooooo five minutes ago. They’re older than the internet at this point in their careers.
+        # [Eclair]But I thought you said you liked them.
+        # [Molly]Ugh, like, five minutes ago.
+        # [Eclair]Seriously?
+        # [Molly]Like, yeah. Now I’m into The Spring Break.
+        # [Eclair]Who are they?
+        # [Molly]Like, The Spring Break isn’t a band, he’s a person. He’s like, a great singer and like, the world’s best laser stringed bantar player.
+        # [Molly]That’s like… a cross between a banjo and a guitar where the strings have been replaced with laser motion sensors. Like, you’ve probably never heard of him.
+        # [Eclair]I haven’t. Can I get paid now?
+        # [Molly]Like, what?
+        # [Eclair]I delivered the fliers like you asked. Can I get paid now?
+        # [Molly]Like, sure, but first you gotta sweep up the place.
+        # [Eclair]I what now?
+        # [Molly]Like, this place needs to be clean for when the customers come in. Like, if you want your money, you’ll have to clean up the floor a little bit.
+
+        menu:
+            "What to do?"
+
+            "Debate":
+
+                # [Eclair]That hardly seems fair.
+                # [Molly]Like, why?
+                # [Eclair]You hired me to pass out fliers, and now you’re withholding what you promised until I do more than we agreed upon.
+                # [Molly]Like, ohmygawd! Like, I almost acted like one of those greedy corporate conformists. So uncool. Like, here you go. Sorry.
+
+                # ECLAIR RECEIVED MONEY!
+
+                $ money += 20
+                $ mollyProgress = 10
+
+
+            "Whine":
+
+                # [Eclair]THAT’S NOT FAIR!
+                # [Molly]Like, life’s not fair. Like, my store got trashed because of false advertising. Like, if you want your money, you like, gotta help me.
+                # [Eclair]*Huff* Fine!
+
+                $ cafeCleanJob = true
+                $ immaturity += 1
+
+    elif cafeCleanUpJob == true:
+
+        if cafeCleanUpJobComplete == true:
+
+        # [Molly]Like, that’s better. Here’s your money.
+        # [Eclair]About time.
+        # [Molly]Like, what was that?
+        # [Eclair]Huh? Oh nothing. IthinkIhearMishelle’smothercallinggottago!
+
+        $ money += 20
+        $ mollyProgress = 10
+
+        else:
+
+            # [Molly]Like, that floor still looks pretty grungy…and I don’t meangrunge in the good way.
+            # [Eclair]There’s a good kind of grunge? Sounds disgusting.
+            # [Molly]Pfft…like, kids.
+
+    elif mollyProgress == 10:
+
+        # [Eclair]What are you listening to now?
+        # [Molly]Like, I just tuned into this golden oldies podcast. The songs are older than the internet, but they’re way retro. You’ve probably never heard of them. Like, “And we danced all night to the best song ever!”
+        # [Eclair]Why do I have the feeling that your tastes are going to change radically in the span of the next few seconds?
+        # [Molly]Like, you wouldn’t understand.
+
+        $ mollyProgress += 1
+
+
+    elif mollyProgress == 11:
+
+        # [Molly]Like, it’s the latest thing: Techountry. It’s electronic club pop techno music spliced with Country. It actually makes Country music listenable. “We’re up all night to get lucky riding that bull.” Like, you’ve probably never heard of them.
+        $ mollyProgress += 1
+
+    elif mollyProgress == 12:
+
+        # [Molly]Like, I found this music mix that randomly mashes up original Top 40 hits and their parodies until you can’t tell where the real one ends and the satire begins. It’s totally ironic. Like, you’ve probably never heard of it.
+        $ mollyProgress += 1
+
+    elif mollyProgress == 13:
+
+        # [Molly]Like, I’m listening to static compositions. To the untrained, uncool ear, it sounds just like the static between radio waves or a bad transmission; but it’s actually music. Like, you’ve probably never heard of it.
+
+label almaAndMarie:
+
+
+
+
+    # [Alma]Eclair? Oh dear, I am so very sorry. I almost collided
+    # into you!
+    # [Eclair]I’m okay.
+    # [Marie]Hi Eclair! Where’s my sister?
+    # [Eclair]She’s still at school.
+    # [Alma]And why aren’t you at school with her?
+    # [Eclair]I had a few…let’s call them “mishaps”. One thing led to another, and now I’m here.
+    # [Alma]Well, it’s the last week of school anyways, so I don’t see the harm, personally. Though if you’re playing hookie, your mother might feel differently.
+    # [Eclair]Eeeep! Please don’t tell her!
+    # [Alma]I wasn’t even thinking of that.  Although, now that you mention it…
+    # [Eclair]Oh no! Please! I got the day off from my teacher, I swear!
+    # [Alma]Are you sure your mother will believe that?
+
+    if skippedSchool == true:
+        # [Eclair]I…hope so?
+    else:
+        # [Eclair]She’ll have to! It’s the truth!
+
+    # [Alma]Are you so sure?
+    # [Eclair]…
+    # [Alma]I could tell your mother, unless…
+    # [Eclair]Unless? Unless what?!
+    # [Alma]I’m going out in a few nights with some old friends from the mainland.
+    # [Marie]Oh no...!
+    # [Alma]I was going to have Mishelle sit with Marie. Perhaps you’d care to join her and watch Marie while I’m gone? Then we’ll call it even and I won’t tell your mother.
+    # [Eclair]Deal!
+    # [Marie]Nooooo!
+    # [Eclair]Hey! What’d I do?
+    # [Alma]Marie, what’s wrong? I thought you liked Eclair.
+    # [Marie]I do. Eclair’s really cool.
+    # [Alma]Then what’s the matter?
+    # [Eclair]Yeah, it wouldn’t be the first time I’ve babysat you.
+    # [Marie]But I’m not some little kid, anymore. I should be babysitting by now. Not being babysat.
+    # [Eclair]I can kinda see your point. I was about your age when Mishelle and I started looking after you.
+    # [Marie]See, Mom? I wanna take care of babies and change diapers, not get watched by someone who is still in them.
+    # [Alma]Marie! Manners!
+    # [Marie]No offense, Eclair.
+    # [Eclair]None taken.
+    # [Alma]I know you’re a very mature and responsible girl, Marie. It just helps me to know that your big sister and her friend, medical issues or not, are looking after you. You’ll get to be the big and responsible one someday soon. I promise.
+    # [Eclair]Is there anything I could do to make you feel better, Marie?
+    # [Marie]Well….there is one thing.
+    # [Eclair]What?
+    # [Marie]Ice cream? I’ve been craving the new double decker banana split boat over at the ice cream shop.
+    # [Eclair]Well, I’d love to buy you a treat, but I don’t have any money. I’m doing an odd job for Molly to get some money of my own.
+    # [Marie]Great! You can take me to the ice cream shop AFTER!
+    # [Eclair]Well…I don’t know.
+    # [Marie]Pleeeeeease! I promise I’ll be really good for you when
+    # you come over and sit with me!
+
+    menu:
+        "Promise to get ice cream with Marie?"
+
+        "Promise":
+
+            if immaturity >= 4:
+                # [Eclair]Hehehe. Okay, okay. You got me. I’ll get you some ice cream after Molly pays me, but only if you share with me.
+            else:
+                # [Eclair]Hehehe. Okay, okay. You got me. I’ll get you some ice cream after Molly pays me.
+
+            # [Marie]Deal!
+            # []NEW NOTE ADDED TO THE INVENTORY!
+
+        "Don't promise":
+
+            if immaturity >= 4:
+                # [Eclair]Nope, nope, nope, nope. Not gonna do it. I need my money for other things.
+            else:
+                # [Eclair]Yeeeeeah, that’s not gonna work on me. I’ll sit with you and treat you fairly, but I expect you to behave; ice cream or not.
+
+            # [Marie]Awww. Well can’t blame a kid for tryin’.
+            # [Eclair]No, I can’t. I’d be doing the same thing if I were in your shoes.
+
+
+
+#Leaving the cafe with a leaking diaper.
+# [Eclair]Everyone is looking at me, I need to go home now, that job can wait.
+
+#Leaving AFTER getting the money WITHOUT talking to Marie
+# [Marie]Hey, Eclair! Wait up! You said you’d take me with you to get ice cream after you got paid!
+if immaturity >= 4:
+    # [Eclair]Oh yeah…right.
+else:
+    # [Eclair]Oh, I almost forgot. Sorry!
+
+
+# [Marie]Can I ask you a personal question?
+# [Eclair]Sure.
+# [Marie]Is it weird wearing…y’know...*whispers*...Diapers?
+
+if immaturity >= 4:
+
+    # [Eclair]Naw. They’re not so bad once you get used to them. They’re actually kinda comfy.
+
+else:
+
+    # [Eclair]You have no idea.
+
+
+if money == 0
+
+    if promiseIceCream == true:
+
+        # [Marie]Can we get ice cream yet? Can we get ice cream yet?! Can?! We?! Get?! Ice cream?! Yet?!
+
+        if immaturity >= 4:
+
+            # [Eclair]Calm down or I’m changing my mind and getting all the ice cream for myself.
+
+        else:
+
+            # [Eclair]Yikes! Looks like your politeness has been outmatched by your impatience!
+
+        # [Marie]Sorry.
+
+    else:
+
+        # [Marie]Any chance that you’ll change your mind?
+        # [Eclair]Sorry, but no.
+        # [Marie]Can’t blame me for trying.
+
+# [Marie]So, you got the money?
+# [Eclair]Yup.
+# [Marie]And you don’t have any more work to do?
+# [Eclair]Nope.
+# [Marie]Soooo…remember that deal we talked about?
+
+if immaturity >= 4:
+    # [Eclair]Yeah…are you absolutely positively sure you still want the ice cream? No chance of a rain check or an I.O.U.?
+    # [Marie]Not at all.
+else:
+    # [Eclair]I do. And may I say you’re being very patient and polite?
+    # [Marie]Thank you. I’m trying.
+
+# [Eclair]Well…
+
+menu:
+    "What to do with the promise?"
+
+    "Keep the promise":
+
+        # [Eclair]Okay, squirt. A deal’s a deal.
+        # [Marie]Awesome!
+
+        if immaturity >= 4:
+
+            # [Eclair]Let’s go get that ice cream!
+            # [Alma]Aren’t you two forgetting something?
+            # [Eclair]Like what?
+            # [Alma]While you two were negotiating this little bribe, not once did you ask if I was okay with it.
+            # [Eclair]Oh yeah…
+            # [Marie] Can I, please?
+
+        else:
+
+            # [Eclair]Aren’t you forgetting something?
+            # [Marie]What?
+            # [Eclair]I don’t remember your mother giving you permission.
+            # [Marie]Oh yeah…
+            # [Marie]Can I, please?
+
+        # [Alma]Hmmmm….come to think of it, this might be a good chance to test how trustworthy and responsible you are Marie.
+        # [Marie]It is?
+        # [Alma]Eclair, you may take Marie to get some ice cream. Marie, I want you to stay with Eclair until you get there. Once you’re at the shop, I want you to wait for me till I come and pick you up. No wandering off, is that clear?
+        # [Marie]Yes, Mom. I’ll be good, I promise.
+
+        # MARIE JOINS THE PARTY!
+
+    "Break the Promise":
+
+        if immaturity >= 4:
+            # [Eclair]Yeahhh…I forgot that I needed all of the money for something else. Sorry, I guess…
+        else:
+            # [Eclair]About that…I’m sorry, Marie, but I’m going to have to go back on my word. I really need the money to buy some other things. How about I bring you some ice cream when I come sit with you?
+
+        # [Marie]But you promised! That’s not fair!
+
+        if immaturity >= 4:
+            # [Eclair]*Shrugs* It’s just ice cream.
+        else:
+            # [Eclair]I know….I know…sorry. I have some difficult decisions to make, and I’ve made them.  I never should’ve made that promise to you, and that was wrong of me.
+        # [Marie]I…I…I….But…I…
+        # [Alma]Marie, what’s wrong? I’m sure Eclair will find a way to make it up to you.
+        # [Marie]I…I don’t think I’ve ever been this mad before.
+
+        if immaturity >= 4:
+            # [Eclair]You’ll get over it.
+        else:
+            # [Eclair]It’ll be alright.
+        # [Marie]*Stares daggers at Eclair* I’m not going to forget this.
+        # [L.R]How many days before that babysitting job?
+        # [C.S]Why?
+        # [L.R]Just wanna set my DVR to record that hot mess of a babysitting job with an angry and vengeful pre-teen.
+        # [C.S]But reality will have changed again by then.
+        # [L.R]And yet I have a distinct feeling a babysitting job will still happen.
+        # [C.S]But….aaaaaah. The more things change…
+        # [L.R]The more things stay the same. Hey, what are you doing?
+        # [C.S]Setting my DVR.
+
+        # [Marie]Any chance that you’ll change your mind?
+        # [Eclair]Sorry, but no.
+        # [Marie]Can’t blame me for trying.
+
+# [Alma]You two take care now. I’ll be by to pick Marie up after I sit in the quiet for a bit and finish my coffee.
+# [Marie]Yes, Mom.
+
+# [Alma]That was rather cruel to break your promise like that, wasn’t it?
+# [Eclair]Sorry. I’ll do better next time, I promise.
+# [Eclair]Yeah. I goofed.
+# [Alma]I just hope for your sake that she gets over it before you babysit.
+
+
+
+# [Eclair]So what are you doing here, ma’am?
+# [Alma]I’m just here to enjoy some coffee.
+# [Eclair]And why is Marie not in school?
+# [Alma]I just wanted to spend some time with my little gi-
+# [Marie]Mom!
+# [Alma]My youngest daughter.
+# [Eclair]So Marie is truant, too? Then why did you blackmail me to babysit?
+# [Alma]What makes you think I would have gone through with it?
+# [Eclair]You were going to ask me to babysit anyways, weren’t you?
+# [Alma]*Winks* I couldn’t resist having a little fun.
+
+
+
+
+
+
+
+
 
 
 #Day 2, after finishing the choice between book or diapers (or both)
